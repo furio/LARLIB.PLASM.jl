@@ -1,7 +1,12 @@
-module LARLIB.PLASM
+module LARLIB_PLASM
 
 using PyCall
 @pyimport pyplasm as p
+
+function larview(V::Array{Float64,2}, EV::Array{Int64,1})
+	a,b = PyObject(V'), PyObject(EV)
+	p.VIEW(p.MKPOL([a,b,1]))
+end
 
 #=
 function larview(V::Array{Any,2}, EV::Array{Any,1})
