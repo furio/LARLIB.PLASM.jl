@@ -1,8 +1,6 @@
 module LARPLASM
 
-using PyCall
-@pyimport pyplasm as p
-import("lar2py.jl")
+include("lar2py.jl")
 
 function pytest()
     c = p.CUBOID(PyObject([1,1,1]))
