@@ -1,4 +1,4 @@
-module LARLIB_PLASM
+module LARPLASM
 
 using PyCall
 @pyimport pyplasm as p
