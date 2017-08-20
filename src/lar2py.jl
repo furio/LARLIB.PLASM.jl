@@ -2,6 +2,7 @@ using PyCall
 @pyimport pyplasm as p
 
 #=
+#sp is scipy
 def CCOMB(vectors):
 return (sp.array(VECTSUM(vectors)) / float(len(vectors))).tolist()  
 
